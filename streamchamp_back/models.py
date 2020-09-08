@@ -13,4 +13,4 @@ class Stream(models.Model):
     favorited = models.ManyToManyField(User)
 
     def __str__(self):
-        return f'Hello World {self.name} {self.favorited}'
+        return self.name
