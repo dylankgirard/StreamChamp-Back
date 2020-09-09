@@ -11,7 +11,7 @@ class Stream(models.Model):
 class User(models.Model):
     name = models.CharField(max_length=100)
     bio = models.CharField(max_length=100)
-    favorites = models.ManyToManyField(Stream)
+    favorites = models.ManyToManyField(Stream, default=[])
 
     def __str__(self):
         return self.name
