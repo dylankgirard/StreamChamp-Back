@@ -17,7 +17,4 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('id', 'name', 'bio', 'favorites')
 
-    # def create(self, validated_data):
-    #     favorites, _ = Stream.objects.get_or_create(
-    #         name=validated_data.get('stream').get('name'))
-    #     return User.objects.create(name=validated_data.get('name'), stream=stream)
+    
