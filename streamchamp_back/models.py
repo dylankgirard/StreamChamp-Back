@@ -10,7 +10,7 @@ class Stream(models.Model):
 
 
 class User(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     bio = models.CharField(max_length=100)
     favorites = ArrayField(models.TextField(), default=list)
 
