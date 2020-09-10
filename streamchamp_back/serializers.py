@@ -11,7 +11,7 @@ class StreamSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
 
-    favorites = serializers.StringRelatedField(many=True)
+    # favorites = serializers.StringRelatedField(many=True)
 
     class Meta:
         model = User
