@@ -9,5 +9,5 @@ urlpatterns = [
     
     path('streams/', views.StreamList.as_view(), name='stream_list'),
     path('streams/<int:pk>', views.StreamDetail.as_view(),
-    name='stream_detail')
+         name='stream_detail')
 ]
