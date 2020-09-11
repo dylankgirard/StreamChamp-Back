@@ -1,6 +1,6 @@
 from rest_framework import generics
-from .serializers import UserSerializer, StreamSerializer
-from .models import User, Stream
+from .serializers import UserSerializer
+from .models import User
 
 
 class UserList(generics.ListCreateAPIView):
@@ -11,13 +11,3 @@ class UserList(generics.ListCreateAPIView):
 class UserDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    
-
-class StreamList(generics.ListCreateAPIView):
-    queryset = Stream.objects.all()
-    serializer_class = StreamSerializer
-
-
-class StreamDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Stream.objects.all()
-    serializer_class = StreamSerializer
